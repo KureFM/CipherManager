@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="CipherManager.View.GeneratorPanel" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:sitvc="clr-namespace:CipherManager.Converter">
+    <UserControl.Resources>
+        <sitvc:SelectedIndexToVisibilityConverter x:Key="SelectedIndexToVisibilityConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock VerticalAlignment="Center">
+        <Run Text="Type" />
+            </TextBlock>
+            <ComboBox Name="typeSelect" VerticalAlignment="Center" Margin="15,0,0,0" Width="100" DisplayMemberPath="GeneratorName" ItemsSource="{Binding GeneratorList}" SelectedIndex="{Binding GeneratorIndex}" />
+            <TextBlock Margin="40,0,0,0" VerticalAlignment="Center" Text="{Binding SelectedItem.LengthName, ElementName=typeSelect}" />
+            <ComboBox Name="test1" VerticalAlignment="Center" Margin="15,0,0,0" Width="100" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling" ItemsSource="{Binding SelectedItem.Generator.CipherSize, ElementName=typeSelect}" SelectedValue="{Binding SelectedItem.Generator.CipherSize.MinSize, ElementName=typeSelect, Mode=OneWay}" SelectedIndex="{Binding LengthIndex, Mode=OneWayToSource}">
+                <ComboBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel />
+                    </ItemsPanelTemplate>
+                </ComboBox.ItemsPanel>
+            </ComboBox>
+            <Button Name="generate" Margin="40,0,0,0" Content="Generate" VerticalAlignment="Center" Click="generate_Click" />
+        </StackPanel>
+        <DockPanel Grid.Row="1" Margin="0,15">
+            <StackPanel Margin="0,0,0,15" Orientation="Horizontal" DockPanel.Dock="Top" Visibility="{Binding SelectedIndex, ConverterParameter=4, Converter={StaticResource SelectedIndexToVisibilityConverter}, ElementName=typeSelect, Mode=OneWay}">
+                <StackPanel.Resources>
+                    <Style x:Key="{x:Type CheckBox}" TargetType="{x:Type CheckBox}" BasedOn="{StaticResource MaterialDesignCheckBox}">
+                        <Setter Property="FrameworkElement.Margin" Value="0,0,40,0" />
+                        <Setter Property="Control.VerticalContentAlignment" Value="Center" />
+                    </Style>
+                </StackPanel.Resources>
+                <CheckBox IsChecked="{Binding IsUpper}">Upper</CheckBox>
+                <CheckBox IsChecked="{Binding IsLower}">Lower</CheckBox>
+                <CheckBox IsChecked="{Binding IsNumber}">Number</CheckBox>
+                <CheckBox IsChecked="{Binding IsOther}">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock VerticalAlignment="Center">Other</TextBlock>
+                        <TextBox Margin="15,0,0,0" Width="100" VerticalAlignment="Center" Text="{Binding OtherStr, UpdateSourceTrigger=PropertyChanged}" />
+                    </StackPanel>
+                </CheckBox>
+            </StackPanel>
+            <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto" DockPanel.Dock="Top">
+                <ContentControl Name="resultContentControl" Content="{Binding SelectedItem.ResultView, ElementName=typeSelect}" />
+            </ScrollViewer>
+        </DockPanel>
+        <Button Grid.Row="2" Content="Add to key store" VerticalContentAlignment="Center" HorizontalAlignment="Right" />
+    </Grid>
+</UserControl>

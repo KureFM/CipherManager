@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CipherManager.Core.DSACipherGenerator">
+    <Position X="4.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Generator\DSACipherGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CipherManager.Core.RSACipherGenerator">
+    <Position X="6.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Generator\RSACipherGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CipherManager.Core.RandomNumberGenerator">
+    <Position X="8.75" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Generator\RandomNumberGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CipherManager.Core.SymmetricCipherGenerator">
+    <Position X="10" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAEAAAAAABAAAAAEIAACA=</HashCode>
+      <FileName>Generator\SymmetricCipherGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CipherManager.Core.BigPrimeGenerator">
+    <Position X="11.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Generator\BigPrimeGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CipherManager.Core.PasswordGenerator">
+    <Position X="13.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAEAAAAA=</HashCode>
+      <FileName>Generator\PasswordGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CipherManager.Core.AsymmetricCipherGenerator">
+    <Position X="5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAJAAACAECAAAA=</HashCode>
+      <FileName>Generator\AsymmetricCipherGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

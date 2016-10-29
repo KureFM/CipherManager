@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CipherManager.Core.DailyCipherContainer">
+    <Position X="5.5" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAIAAAAAAAAAAAAACCQAAAEAAAAA=</HashCode>
+      <FileName>CipherFile\DailyCipherContainer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Info" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CipherManager.Core.CipherInfo">
+    <Position X="8.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAGAAAAAAAAAAAAIAAAgRAAAAEAIAAAQAAAAAAAQA=</HashCode>
+      <FileName>CipherFile\CipherInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CipherManager.Core.AsymmetricCipherContainer">
+    <Position X="8.25" Y="5.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>CipherFile\AsymmetricCipherContainer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Info" />
+      <Property Name="Cipher" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CipherManager.Core.SymmetricCipherContainer">
+    <Position X="12.25" Y="1.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IAAACAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>CipherFile\SymmetricCipherContainer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Info" />
+      <Property Name="Cipher" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CipherManager.Core.SymmetricCipher">
+    <Position X="16.25" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Generator\SymmetricCipher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CipherManager.Core.AsymmetricCipher">
+    <Position X="12.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAQAAAAAAgIAAAAQAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Generator\AsymmetricCipher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PrivateKey" />
+      <Property Name="PublicKey" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CipherManager.Core.CipherObject">
+    <Position X="16.25" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACCAAAAgAAAIAEgIAAAgAAAAAAAqAAAQAIAAAAAiA=</HashCode>
+      <FileName>Generator\CipherObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

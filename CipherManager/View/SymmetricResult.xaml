@@ -1,0 +1,10 @@
+﻿<UserControl 
+    x:Class="CipherManager.View.SymmetricResult" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:bb="clr-namespace:CipherManager.View">
+    <StackPanel>
+        <TextBlock TextBlock.FontSize="18" TextBlock.Foreground="{DynamicResource HighlightBrush}">Generated Cipher:</TextBlock>
+        <bb:ByteBox x:Name="cipherBox" Margin="0,5,0,0" Split=":" />
+    </StackPanel>
+</UserControl>
